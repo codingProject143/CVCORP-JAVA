@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class main{
+    public static void main(String[] args){
+    Scanner Sc = new Scanner(System.in);
+        int a = Sc.nextInt();
+        int b = Sc.nextInt();
+        int c=0;
+        if(a>b)
+        {
+            for(int i=a;i>=b;i--)
+            {
+                c++;
+                if(c!=1)
+                {
+                    System.out.print(", ");
+                }
+                if(i>=0)
+                {
+                     System.out.print(5*i);
+                }
+                else
+                {
+                    System.out.print("("+5*i+")");
+                }
+            }
+        }
+        else
+        {
+            for(int i=a;i<=b;i++)
+            {
+                c++;
+                if(c!=1)
+                {
+                    System.out.print(", ");
+                }
+                if(i<=-1)
+                {
+                    System.out.print("("+i*5+")");
+                }
+                else
+                {
+                    System.out.print(i*5);
+                }   
+            }
+        }
+    }
+}
