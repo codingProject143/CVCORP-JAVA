@@ -1,0 +1,46 @@
+/* write a program to perform all these tasks
+
+a.     Store a number in a variable
+
+b.    If value is not in range (100-1000) prints WRONG NUMBER else follows the steps
+
+c.     Check even or odd
+
+d.    If even divide the number by 3 and print the remainder
+
+e.     If odd divide the number by 2 and print the remainder.
+
+
+Constraints:
+Input : First line of input contains an Integer n reperesent number
+
+
+Example:
+Input :         498
+
+Output :      0  */
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        if(n < 100 || n > 1000) {
+            System.out.println("WRONG NUMBER");
+        }
+        else {
+            
+            if(n % 2 == 0) {   
+                System.out.println(n % 3);
+            }
+            else {            
+                System.out.println(n % 2);
+            }
+        }
+
+        sc.close();
+    }
+}
