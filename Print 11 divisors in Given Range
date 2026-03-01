@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+
+        if(start > end) {
+            System.out.println("INVALID RANGE");
+        } 
+        else {
+            boolean found = false;
+
+            for(int i = start; i <= end; i++) {
+                if(i % 11 == 0) {
+                    System.out.print(i + " ");
+                    found = true;
+                }
+            }
+
+            if(!found) {
+                System.out.println("NO NUMBERS");
+            }
+        }
+
+        sc.close();
+    }
+}
