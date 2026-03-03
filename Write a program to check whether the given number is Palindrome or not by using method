@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class PalindromeChecker {
+  
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if (num < 0) {
+            num = -num;  // Convert negative to positive
+        }
+        if (isPalindrome(num)) {
+            System.out.println("The given number is Palindrome.");
+        } else {
+            System.out.println("The given number is not a PalinDrome.");
+        }
+        sc.close();
+    }
+   
+    public static boolean isPalindrome(int n) {
+        int original = n;
+        int reversed = 0;
+        while (n != 0) {
+            int digit = n % 10;
+            reversed = reversed * 10 + digit;
+            n /= 10;
+        }
+        return original == reversed;
+    }
+}
