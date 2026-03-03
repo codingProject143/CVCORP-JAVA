@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class PrintCvcorpNTimes {
+    public static void printCvcorpNTimes() {
+        Scanner scanner = new Scanner(System.in);
+        
+    
+        int n = scanner.nextInt();
+        
+        // Check for invalid input
+        if (n <= 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+           for (int i = 0; i < n; i++) {
+            System.out.println("cvcorp");
+        }
+    }
+
+    
+    public static void main(String[] args) {
+        printCvcorpNTimes();
+    }
+}
