@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+
+public class ArrayHCF {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+     
+        int size = scanner.nextInt();
+        if (size <= 0 || size >= 10) {
+            System.out.println("Invalid Array Size");
+            return;
+        }
+        
+       
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+           
+            if (arr[i] < 0) {
+                arr[i] = -arr[i];
+            }
+        }
+        
+    
+        int hcf = arr[0];
+        for (int i = 1; i < size; i++) {
+            hcf = calculateHCF(hcf, arr[i]);
+            // If HCF becomes 1, we can break early
+            if (hcf == 1) {
+                break;
+            }
+        }
+        
+        System.out.println(hcf);
+    }
+    
+    // Helper method to calculate HCF/GCD using Euclidean algorithm
+    private static int calculateHCF(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+}
